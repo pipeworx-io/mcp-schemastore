@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-schemastore",
+  "version": "0.1.0",
+  "description": "JSON Schema catalog (SchemaStore.org)",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "schemastore"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-schemastore"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
