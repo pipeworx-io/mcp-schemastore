@@ -1,0 +1,67 @@
+[
+  {
+    "name": "list_schemas",
+    "description": "List SchemaStore catalog entries. Optional case-insensitive filter on name/description/fileMatch.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "filter": {
+          "type": "string",
+          "description": "e.g. \"github\", \"tsconfig\", \"openapi\""
+        },
+        "limit": {
+          "type": "number",
+          "description": "1-500 (default 50)"
+        }
+      }
+    }
+  },
+  {
+    "name": "find_schema_for",
+    "description": "Match a config filename against the SchemaStore catalog (schemastore.org) to find which JSON Schemas declare a fileMatch glob covering it, for example package.json, tsconfig.json, or .github/workflows/ci.yml. Returns the matching catalog entries with schema name, description, fileMatch globs, and the json.schemastore.org schema URL. Answers which JSON Schema validates a given config file so an editor or linter can be pointed at it.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "description": "e.g. package.json, .github/workflows/ci.yml"
+        }
+      },
+      "required": [
+        "filename"
+      ]
+    }
+  },
+  {
+    "name": "fetch_schema",
+    "description": "Fetch a JSON Schema document by URL (must be hosted on json.schemastore.org).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "e.g. https://json.schemastore.org/package.json"
+        }
+      },
+      "required": [
+        "url"
+      ]
+    }
+  },
+  {
+    "name": "lookup",
+    "description": "Exact-name lookup against the catalog (case-insensitive).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "e.g. \"package.json\""
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  }
+]
