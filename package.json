@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-schemastore",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "SchemaStore MCP",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "schemastore",
     "gatewaySlug": "schemastore",
-    "sourceHash": "v1-847a17949160ac5d8c8c399511cbc4b8bf16c3fc135d2c4afffc9ebbe2b0a59e",
-    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
+    "sourceHash": "v1-3ec30079a07a4b9aa09c0d22efd38477c42ccefce083b77a993e678646b0e03d",
+    "sourceCommit": "8fc802aa5e23be625ce08d97178f5676c7bc93f3"
   }
 }
